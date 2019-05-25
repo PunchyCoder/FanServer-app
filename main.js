@@ -2,7 +2,7 @@
 
 
 const url = "https://kitsu.io/api/edge/anime"; //data.attributes.posterImage
-const APIKey = 'AIzaSyDNG36ws49yKH8Ze2XifveUAKM5n_o9tr0'; // Youtube Key
+const APIKey = '';
 
 function formatQueryParams(params) {
 	const queryItems = Object.keys(params)
