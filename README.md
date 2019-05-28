@@ -11,6 +11,23 @@
 
 <br>
 
+## Tasks
+* ~~__Synopsis-button expands card & displays synopsis when clicked__~~
+* ~~__Trailer button expands card & displays trailer when clicked__~~
+* ~~__Trailer-button hides Synopsis and vise versa__~~
+* ~~__Fetchs video forEach resulting title__~~
+* If video/trailer not available => display error message => stand-in image?
+* Limit synopsis verbosity? => add "read more" link/button. 
+* Stuff...
+* Add search by genre?
+  * add input
+  * add search param
+  * find genre endpoint(s)
+  * list genres searched 
+  * display pills
+  
+<br>
+
 ### Notes
 - It might be worthwhile to make a list of features/objectives to complete on here(README) and ~~cross em' off~~ as I develop.
 - I'm beginning to kinda' enjoy the process of logging my struggles and at least part of my process. I may do something more in-depth.
