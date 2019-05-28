@@ -2,7 +2,7 @@
 
 
 const url = "https://kitsu.io/api/edge/anime"; //data.attributes.posterImage
-const APIKey = 'AIzaSyBNbDFY9N6VjBIq_3QUODfX0olLhwrEGqg'; // Youtube Key
+const APIKey = '';
 
 function formatQueryParams(params) {
 	const queryItems = Object.keys(params)
@@ -25,7 +25,6 @@ function formatSearchResults(responseJson) {
 	responseJson['data'].forEach( element => {
 		$('#results').append( // div.card => added .expand (debugging purposes)
 			`<div class="card">
-
 				 
 				<img src="${element.attributes.posterImage.tiny}">
 				<div class="info">
@@ -34,9 +33,17 @@ function formatSearchResults(responseJson) {
 					<p>${element.attributes.episodeCount} episodes</p>
 					<p><i class="fas fa-heart"></i> ${element.attributes.averageRating}</p>
 
-					<input class="synopsis square-btn" type="button" name="synopsis-btn" value="synopsis">
+					<div class="button-container">
+						<input class="synopsis square-btn" type="button" name="synopsis-btn" value="synopsis">
+
+						<input class="trailer square-btn" type="button" name="trailer-btn" value="trailer">
+					</div>
 				</div>
 				
+				<div class="trailer hidden">
+					<iframe type="text/html" width="300" height="200" src="https://www.youtube.com/embed/${element.attributes.youtubeVideoId}?modestbranding=1&amp;rel=0&amp;showinfo=0" frameborder="0" ><br />
+					</iframe>
+				</div>
 
 				<div class="synopsis hidden">
 					<h4 class="synopsis">Synopsis</h4>
@@ -70,7 +77,7 @@ function searchYoutube(search) {
   	.then(response => response.json())
   	.then(responseJson => {
   		console.log(responseJson)
-  		const videoID = responseJson.items[0].id.videoId;
+  		const videoID = responseJson['data']['youtubeVideoId']; // need to display video forEach result > not just item[0]
   		displayResults(responseJson, videoID);
   	})
 }
@@ -106,14 +113,43 @@ function addCardButtons() {
 	// 	// $(e.currentTarget).next().toggleClass('hidden');
 	// 	$(document.querySelector('div.'))
 	// });
+
+
+	// Deals with "synopsis" button "logic"
 	$('input.synopsis').on("click", function(e) { //need to select only
 		e.stopImmediatePropagation();
 		
-		$(e.currentTarget).parent().parent().first().toggleClass('expand');
+		const cardEl = $(e.currentTarget).parent().parent().parent().first();
+		const trailerEl = $(e.currentTarget).parent().parent('div.info').next();
 
-		$(e.currentTarget).parent('div.info').first().next().toggleClass('hidden');
+		if (!trailerEl.hasClass('hidden')) {
+			trailerEl.addClass('hidden');
+			cardEl.toggleClass('expand');
+		};
+
+		$(e.currentTarget).parent().parent().parent().first().toggleClass('expand');
+
+		$(e.currentTarget).parent().parent('div.info').first().next().next().toggleClass('hidden');
+	});
+
+	// Deals with "trailer" button "logic"
+	$('input.trailer').on("click", function(e) { //need to select only
+		e.stopImmediatePropagation();
+
+		const cardEl = $(e.currentTarget).parent().parent().parent().first();
+		const synopsisEl = $(e.currentTarget).parent().parent('div.info').first().next().next();
+		
+		if (!synopsisEl.hasClass('hidden')) {
+			synopsisEl.toggleClass('hidden');
+			cardEl.toggleClass('expand');
+		};
+
+		$(e.currentTarget).parent().parent().parent().first().toggleClass('expand');
+
+		$(e.currentTarget).parent().parent('div.info').next().toggleClass('hidden'); // trailer video el needs to be hidden
 	});
 }
+
 
 function watchForm() {
 	$('body').toggleClass('fade');
