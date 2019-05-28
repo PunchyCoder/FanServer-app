@@ -24,7 +24,7 @@ function formatSearchResults(responseJson) {
 
 	responseJson['data'].forEach( element => {
 		$('#results').append( // div.card => added .expand (debugging purposes)
-			`<div class="card expand">
+			`<div class="card">
 
 				 
 				<img src="${element.attributes.posterImage.tiny}">
@@ -34,11 +34,11 @@ function formatSearchResults(responseJson) {
 					<p>${element.attributes.episodeCount} episodes</p>
 					<p><i class="fas fa-heart"></i> ${element.attributes.averageRating}</p>
 
-					<input class="synopsis btn" type="button" name="synopsis-btn" value="synopsis">
+					<input class="synopsis square-btn" type="button" name="synopsis-btn" value="synopsis">
 				</div>
 				
 
-				<div class="synopsis">
+				<div class="synopsis hidden">
 					<h4 class="synopsis">Synopsis</h4>
 					<p>${element.attributes.synopsis}</p>
 				</div>
@@ -108,7 +108,9 @@ function addCardButtons() {
 	// });
 	$('input.synopsis').on("click", function(e) { //need to select only
 		e.stopImmediatePropagation();
-		// $(e.currentTarget).next().toggleClass('hidden');
+		
+		$(e.currentTarget).parent().parent().first().toggleClass('expand');
+
 		$(e.currentTarget).parent('div.info').first().next().toggleClass('hidden');
 	});
 }

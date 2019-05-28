@@ -1,15 +1,36 @@
-body {
+ body {
 	font-family: sans-serif;
 	background-color: #fff;
 }
 
-h2 {
-	padding: 5px;
-	padding-right: 15px;
+.red {
+	background-color: red;
 }
 
-p .results {
-	padding: 5px;
+nav {
+  width: 100%;
+  background-color: #fff;
+  margin: 0;
+  padding: 30px;
+}
+
+
+h1 {
+  margin: 0;
+  display: inline;
+}
+
+.search {
+  display: inline-block;
+  margin: 0;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
 }
 
 .card {
@@ -27,6 +48,8 @@ p .results {
 	border-bottom: solid 3px #aaa;
 	border-left: solid 1px #aaa;
 	border-right: solid 1px #aaa;
+
+	/*overflow: hidden;*/
 }
 
 img {
@@ -40,13 +63,25 @@ label {
 .info  {
 	display: flex;
 	flex-direction: column;
-	height: 150px;
+}
+
+.info h3 {
+	font-size: 1rem;
+	border: solid 1px black;
+	max-height: 100px;
+	width: 170px;
+	margin: 0;
+	margin-left: 10px;
 }
 
 .info p {
-	margin-top: 0;
+	font-size: 12px;
+	margin: 0;
 	margin-left: 10px;
 }
+
+
+
 
 input[type='submit'] {
 	border: none;
@@ -78,3 +113,92 @@ input[type='submit']:focus{
 	border-color: blue;
 	outline: none;
 }
+
+.btn {
+	border: none;
+	border: solid 3px blue;
+	border-radius: 20px;
+
+	color: blue;
+	background-color: white;
+
+	font-weight: 600;
+	padding: 7px;
+}
+
+.square-btn {
+	border: none;
+	border: solid 1px lightgrey;
+
+	color: grey;
+	background-color: white;
+
+	border-radius: 5px;
+
+	font-weight: 600;
+	padding: 5px;
+	width: fit-content;
+}
+
+.expand {
+	align-items: flex-start;
+	flex-flow: wrap;
+	background-color: cyan;
+
+	-webkit-transition: height 1.1s, background-color .9s; /* For Safari 3.1 to 6.0 */
+  	transition: height .8s, background-color .9s;
+  	transition-timing-function: ease;
+
+  	height: fit-content;  /*Killing it; greatest invention in CSS*/
+}
+ 
+h4.synopsis {
+	margin: 0;
+	margin-bottom: 3px;
+}
+
+div.synopsis > p {
+	margin: 0;
+	margin-bottom: 20px;
+	padding: 8px;
+
+	font-size: 10px;
+	line-height: .75rem;
+	font-weight: 600;
+	letter-spacing: .95px;
+	line-height: 14px;
+	
+	color: white;
+	background-color: #0f82a8;
+
+	border-radius: 10px;
+	border:solid 2px white;
+	
+	
+
+	-webkit-transition: height 1.1s; /* For Safari 3.1 to 6.0 */
+  	transition: height .8s;
+  	transition-timing-function: ease;
+}
+
+input.synopsis {
+	background-color: white;
+}
+
+.hidden {
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*-webkit-transition: width 2s;  For Safari 3.1 to 6.0 
+  transition: width 2s;*/
+/*---------------------------------------*/
