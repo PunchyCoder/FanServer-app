@@ -116,6 +116,7 @@ function addCardButtons() {
 }
 
 function watchForm() {
+	$('body').toggleClass('fade');
 	searchAnime("death"); // for debugging purpposes...
 	$('form').submit(function(e) {
 		e.preventDefault();
