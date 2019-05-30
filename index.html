@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html> 
 <html>
 <head>
 	<meta charset="utf-8">
@@ -8,14 +8,21 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 <body class="fade">
-	<h1>FanServer</h1>
+	<div class="hero">
+		<div class="logo">
+			<img src="https://static.thenounproject.com/png/157617-200.png">
+			<h1>FanServer</h1>
+		</div>
+		<p>Serving you anime trailers on a <span><strong>silver platter</strong></span></p>
+	</div>
+	
 	<form>
-		<h2>Search</h2>
+		<h3>Just search by <em>Title</em></h3>
 		<label> 
-			<input class="search-title" type="text" name="search">
+			<input class="search-title" type="text" name="search" placeholder="Title or Keyword">
 		</label>
 		
-		<input id="submit" class="square-btn" type="submit" name="search" value="Search">
+		<input id="submit" class="btn" type="submit" name="search" value="Search">
 	</form>
 
 	<section id="results"></section>
