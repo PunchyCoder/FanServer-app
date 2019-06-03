@@ -284,10 +284,6 @@ h4.trailer {
 		margin: 5px 5px;
 	}
 
-	.expand {
-		position: absolute;
-	}
-
 }
 
 @media screen and (min-width: 1400px) {
