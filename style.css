@@ -119,10 +119,10 @@ input[type='text'] {
 	margin: 15px 0 15px 0;
 	height: 180px;
 
-	animation: 1s ease-out 0s 1 slideInFromLeft;
-	-webkit-transition: height 3s, background-color 2s; /* For Safari 3.1 to 6.0 */
+	/*animation: 1s ease-out 0s 1 slideInFromLeft;
+	-webkit-transition: height 3s, background-color 2s;  For Safari 3.1 to 6.0 
   	transition: height 3s, background-color 2s;
-  	transition-timing-function: ease;
+  	transition-timing-function: ease;*/
 }
 
 .card img {
@@ -192,14 +192,14 @@ h4.synopsis {
 div.synopsis > p {
 	margin: 0;
 	margin-bottom: 20px;
-	padding: 20px;
+	padding: 20px 10px 20px 10px;
 	font-size: 16px;
 	font-weight: 500;
-	letter-spacing: 1px;
+	letter-spacing: .8px;
 	line-height: 26px;
-	text-align: center; /* MAYBE NOT NECESSARY */
+	text-align: left; /* MAYBE NOT NECESSARY */
 	color: black;
-	background-color: #49beb7;
+	background-color: #eff;
 	border-radius: 10px;
 	border:solid 2px white;
 }
@@ -236,11 +236,6 @@ h4.trailer {
 	border:solid 2px white;
 }
 
-
-body.fade {
-	opacity: 0;
-}
-
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
@@ -250,3 +245,78 @@ body.fade {
   }
 }
 
+@media screen and (min-width: 750px) {
+
+	.hero {
+		font-size: 30px;
+	}
+
+	div.logo {
+		flex-direction: row;
+	}
+
+	.logo img {
+		margin-right: 50px;
+	}
+
+	.hero span {
+		font-size: 30px;
+	}
+
+	form {
+		margin: 30px 15% 30px 15%;
+		font-size: 26px;
+	}
+
+	form input {
+		font-size: 26px;
+	}
+
+	#results { 
+		display: flex;
+		flex-direction: row;
+		flex-flow: wrap;
+		justify-content: center;
+	}
+
+	.card {
+		width: 40%;
+		margin: 5px 5px;
+	}
+
+	.expand {
+		position: absolute;
+	}
+
+}
+
+@media screen and (min-width: 1400px) {
+
+	form {
+		text-align: center;
+	}
+
+	.card {
+		text-align: center;
+	}
+
+	.card img {
+		margin: 0 20px 0 5px;
+	}
+
+	.info h3 {
+		font-size: 1.4rem;
+	}
+
+	.info p {
+		font-size: 16px;
+	}
+
+	.card input {
+		font-size: 18px;
+	}
+
+	.button-container {
+		flex-direction: column;
+	}
+}
