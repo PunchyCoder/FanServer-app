@@ -1,4 +1,4 @@
- <!DOCTYPE html> 
+<!DOCTYPE html> 
 <html>
 <head>
 	<meta charset="utf-8">
@@ -6,18 +6,20 @@
 	<title>FanServer</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:400,700&display=swap" rel="stylesheet">
 </head>
 <body class="fade">
-	<div class="hero">
+
+	<header id="hero">
 		<div class="logo">
 			<img src="https://static.thenounproject.com/png/157617-200.png">
-			<h1>FanServer</h1>
+			<h1 class="boldFont">FanServer</h1>
 		</div>
-		<p>Serving you anime trailers on a <span><strong>silver platter</strong></span></p>
-	</div>
+		<p>Serving you <strong>Anime</strong> trailers on a <span><strong>Silver Platter</strong></span></p>
+	</header>
 	
 	<form>
-		<h3>Just search by <em>Title</em></h3>
+		<h3>Just search Anime by <strong>Title</strong></h3>
 		<label> 
 			<input class="search-title" type="text" name="search" placeholder="Title or Keyword">
 		</label>
@@ -25,7 +27,16 @@
 		<input id="submit" class="btn" type="submit" name="search" value="Search">
 	</form>
 
-	<section id="results"></section>
+	<section id="results">
+	</section>
+
+	<hr> <!-- -->
+	
+	<footer id="footer">
+		<p>FanServer was created by Kyle Knutson <strong>|</strong> Back to <a href="#hero">Top</a></p>
+	</footer>
+
+	<hr> <!-- -->
 
 	<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js'></script>
 	<script type="text/javascript" src='main.js'></script>

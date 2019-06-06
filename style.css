@@ -1,7 +1,8 @@
 
+
  body {
- 	margin: 30px 2% 60px 2%;
-	font-family: sans-serif;
+ 	margin: 15px 2% 60px 2%;
+	font-family: 'Montserrat';
 	background-color: #fff;
 	opacity: 1;
 
@@ -13,7 +14,7 @@
   	animation: 1s linear 0s 1 slideInFromLeft;
 }
 
-.hero {
+#hero {
 	height: 400px;
 	padding: 5px;
 	color: white;
@@ -35,6 +36,8 @@ div.logo {
 
 h1.logo {
 	margin: 10px 0 50px 0;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
 }
 
 .logo img {
@@ -47,20 +50,20 @@ h1.logo {
 	padding: 10px;
 }
 
-.hero p {
+#hero p {
 	display: inline-block;
 	margin: 0 20% 0 20%;
 	text-align: center;
 }
 
-.hero span {
+#hero span {
 	font-size: 18px;
-
 }
 
 form {
+	text-align: center;
 	margin: 30px 0 30px 0;
-	border: solid 1px #32dbc6;
+	border: solid 1px #c63356;
 	border-radius: 5px;
 	padding: 15px;
 	padding-bottom: 20px;
@@ -72,20 +75,49 @@ form h3 {
 	color: #085f63;
 }
 
+form strong {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 600;
+}
+
+
+
+input[type='text']:focus {
+	border: solid 2px #c63356;
+}
+
+input[type='text']:hover{
+	border: solid 2px #c63356;
+}
+
 input[type='text'] {
 	border: none;
 	border-radius: 5px;
-	background-color: #ddd;
+	background-color: #fff;
 	box-shadow: 2px 5px 2px inset #999;
 	font-weight: 600;
+	font-size: 16px;
 	color: #c63356;
 	outline: none;
-	padding: 5px;
+	padding: 8px;
 }
 
 .btn:focus {
+	font-weight: 700;
 	color: #ebefd0;
 	background-color: #085f63;
+	border-width: 3px;
+	border-color: #fff;
+	outline-color: #c63356;
+}
+
+.btn:hover {
+	font-weight: 700;
+	color: #ebefd0;
+	background-color: #085f63;
+
+	border-width: 3px;
+	border-color: #fff;
 	outline-color: #c63356;
 }
 
@@ -96,12 +128,16 @@ input[type='text'] {
 
 .btn {
 	border: none;
-	border: solid 1px #ebefd0;
-	color: #fff;
-	background-color: #49beb7; /*#c63356 #f9cf11*/
 	border-radius: 5px;
-	font-weight: 600;
-	padding: 5px;
+	border: solid 2px #ebefd0;
+	color: #000;
+	background-color: #49beb7; 
+	border-radius: 5px;
+	font-family: 'Roboto';
+	font-size: 16px;
+	font-weight: 700;
+	letter-spacing: 1.2px;
+	padding: 8px;
 	margin: 2px;
 	width: fit-content;
 }
@@ -111,18 +147,26 @@ input[type='text'] {
 	border-radius: 8px;
 }
 
+#results h2 {
+	margin: 0;
+	margin-bottom: 3px;
+	padding: 5px 0 5px 0;
+	text-align: center;
+	position: relative;
+	top: 10px;
+	background-color: #49beb7;
+	color: #000;
+	border: solid 1px #085f63;
+	border-radius: 8px;
+}
+
 .card {
 	display: flex;
 	align-items: center;
-	background-color: #085f63;  /* CARD BACKGROUND-COLOR*/
+	background-color: #085f63;  
 	padding: 5px;
 	margin: 15px 0 15px 0;
 	height: 180px;
-
-	/*animation: 1s ease-out 0s 1 slideInFromLeft;
-	-webkit-transition: height 3s, background-color 2s;  For Safari 3.1 to 6.0 
-  	transition: height 3s, background-color 2s;
-  	transition-timing-function: ease;*/
 }
 
 .card img {
@@ -140,6 +184,7 @@ div.info  {
 }
 
 .info h3 {
+	font-family: 'Roboto', sans-serif;
 	font-size: 1rem;
 	border-bottom: solid 1px #ebefd0;
 	max-height: 100px;
@@ -149,11 +194,12 @@ div.info  {
 }
 
 .info p {
-	font-size: 12px;
 	margin: 0;
 	margin-left: 10px;
 	margin: 2px;
+	letter-spacing: .8px;
 	font-weight: 600;
+	font-size: 12px;
 	color: #fff;
 	opacity: 1;
 }
@@ -186,13 +232,13 @@ h4.synopsis {
 	color: #000;
 	border: solid 2px white;
 	border-radius: 8px;
-
 }
 
 div.synopsis > p {
 	margin: 0;
 	margin-bottom: 20px;
 	padding: 20px 10px 20px 10px;
+	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	font-weight: 500;
 	letter-spacing: .8px;
@@ -207,7 +253,6 @@ div.synopsis > p {
 .hidden {
 	display: none;
 	opacity: 0;
-
 	-webkit-transition: opacity 1s; /* For Safari 3.1 to 6.0 */
   	transition: opacity 1s;
   	transition-timing-function: ease-out;
@@ -236,6 +281,31 @@ h4.trailer {
 	border:solid 2px white;
 }
 
+footer {
+	text-align: center;
+	font-family: 'Roboto';
+}
+
+footer strong {
+	font-size: 24px;
+}
+
+footer a {
+	padding: 1px 3px;
+	font-weight: 700;
+	color: #c63356;
+}
+
+footer a:hover {
+	border: solid 2px #c63356;
+	border-radius: 5px;
+}
+
+footer a:focus {
+	border: solid 2px #c63356;
+	border-radius: 5px;
+}
+
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
@@ -245,10 +315,59 @@ h4.trailer {
   }
 }
 
+@media screen and (min-width: 550px) and (max-width: 1000px) and (orientation: landscape) {
+
+	#hero {
+		height: 200px;
+		margin-top: 0px;
+	}
+
+	div.logo {
+		flex-direction: row;
+	}
+
+	#hero p {
+		margin-top: 4%;
+	}
+
+	.logo img {
+		margin-right: 10%;
+		width: 50px;
+		height: 50px;
+	}
+
+	form {
+		margin: 10px 0 10px 0;
+	}
+
+	#results {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#results h2 {
+		padding: 12px 0;
+		width: 60%;
+		margin-bottom: 20px;
+	}
+
+	.card {
+	    width: 60%;
+	    margin: 5px 0;
+	}
+
+	.card img {
+		border-radius: 5px;
+		margin: 0 15px 0 15px;
+	}
+
+}
+
 @media screen and (min-width: 750px) {
 
-	.hero {
-		font-size: 30px;
+	#hero {
+		font-size: 22px;
 	}
 
 	div.logo {
@@ -259,34 +378,47 @@ h4.trailer {
 		margin-right: 50px;
 	}
 
-	.hero span {
-		font-size: 30px;
+	#hero span {
+		font-size: 22px;
+	}
+
+	#hero p {
+		margin-top: 5%;
 	}
 
 	form {
 		margin: 30px 15% 30px 15%;
-		font-size: 26px;
+		/*font-size: 26px;*/
+	}
+
+	input[type='text'] {
+		width: 400px;
 	}
 
 	form input {
-		font-size: 26px;
+		/*font-size: 26px;*/
 	}
 
 	#results { 
 		display: flex;
-		flex-direction: row;
-		flex-flow: wrap;
-		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+	}/**/
+
+	#results h2 {
+		padding: 12px 0;
+		width: 60%;
+		margin-bottom: 20px;
 	}
 
 	.card {
-		width: 40%;
+		width: 60%;
 		margin: 5px 5px;
 	}
 
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1000px) {
 
 	form {
 		text-align: center;
@@ -301,15 +433,15 @@ h4.trailer {
 	}
 
 	.info h3 {
-		font-size: 1.4rem;
+		/*font-size: 1.4rem;*/
 	}
 
 	.info p {
-		font-size: 16px;
+		/*font-size: 16px;*/
 	}
 
 	.card input {
-		font-size: 18px;
+		/*font-size: 18px;*/
 	}
 
 	.button-container {
