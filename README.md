@@ -1,15 +1,28 @@
 # FanServer-app
 Search a database of anime series titles/view trailers
+
+## Author
+Kyle Knutson<br>
+[Portfolio](https://punchycoder.github.io/Kyle-Knutson-Portfolio/)
+
 ## Screen Shots of FanServer
+
 Main page-top:
 ![Screen shot of FanServer hero](fanServer-hero.jpg)
 ---
+
 Main Page-Results:
 ![Screen shot of FanServer results](fanServer-results.jpg)
 ---
 
+## Built with
+* HTML5
+* CSS
+* JavaScript
+* jQuery
+
 ## Live App
-[Github](www.google.com)
+[Check it out](https://punchycoder.github.io/FanServer-app/)
 
 ## Struggles
 * Adding basic toggle funcion to syopsis-display on button click. The key was to use <code>event.stopImmediatPropagation</code>... google it.
@@ -41,8 +54,4 @@ Main Page-Results:
   * list genres searched 
   * display pills
   
-<br>
 
-### Notes
-- It might be worthwhile to make a list of features/objectives to complete on here(README) and ~~cross em' off~~ as I develop.
-- I'm beginning to kinda' enjoy the process of logging my struggles and at least part of my process. I may do something more in-depth.
