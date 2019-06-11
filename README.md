@@ -26,9 +26,12 @@ Search a database of anime series titles/view trailers
 * ~~__Fetchs video forEach resulting title__~~
 * ~~__If video/trailer not available => display error message => stand-in image?__~~
 * ~~__Limit synopsis verbosity? => add "read more" link/button.__~~
+* ~~__Responsiveness__~~
+* ~~__Error logic for absent video IDs__~~
 * __Stuff...__
 
 ## Abandoned Feature(s)
+* Search with Google's Youtube API (search list)
 * Add search by genre?
   * add input
   * add search param
