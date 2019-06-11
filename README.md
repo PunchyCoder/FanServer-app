@@ -1,9 +1,11 @@
 # FanServer-app
 Search a database of anime series titles/view trailers
 ## Screen Shots of FanServer
-![Screen shot of FanServer hero](fanServer-hero.PNG)
+Main page-top:
+![Screen shot of FanServer hero](fanServer-hero.jpg)
 ---
-![Screen shot of FanServer results](fanServer-results.PNG)
+Main Page-Results:
+![Screen shot of FanServer results](fanServer-results.jpg)
 ---
 
 ## Live App
