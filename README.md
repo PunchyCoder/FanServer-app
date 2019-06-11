@@ -1,6 +1,9 @@
 # FanServer-app
 **Search a database of anime series titles/view trailers**
 
+![Screen shot of FanServer hero](fanServer-hero.png)
+![Screen shot of FanServer results](fanServer-results.png)
+
 <br>
 
 ## Struggles
