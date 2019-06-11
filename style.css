@@ -1,4 +1,4 @@
-
+ 
 
  body {
  	margin: 15px 2% 60px 2%;
@@ -243,7 +243,7 @@ div.synopsis > p {
 	font-weight: 500;
 	letter-spacing: .8px;
 	line-height: 26px;
-	text-align: left; /* MAYBE NOT NECESSARY */
+	text-align: left;
 	color: black;
 	background-color: #eff;
 	border-radius: 10px;
@@ -277,6 +277,22 @@ h4.trailer {
 	padding: 20px;
 	text-align: center; /* MAYBE NOT NECESSARY */
 	background-color: #011d30;
+	border-radius: 10px;
+	border:solid 2px white;
+}
+
+.error {
+	margin: 0;
+	margin-bottom: 20px;
+	padding: 20px 10px 20px 10px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	letter-spacing: .8px;
+	line-height: 26px;
+	text-align: left; /* MAYBE NOT NECESSARY */
+	color: black;
+	background-color: #eff;
 	border-radius: 10px;
 	border:solid 2px white;
 }
@@ -388,15 +404,10 @@ footer a:focus {
 
 	form {
 		margin: 30px 15% 30px 15%;
-		/*font-size: 26px;*/
 	}
 
 	input[type='text'] {
 		width: 400px;
-	}
-
-	form input {
-		/*font-size: 26px;*/
 	}
 
 	#results { 
@@ -424,24 +435,19 @@ footer a:focus {
 		text-align: center;
 	}
 
+	#results {
+		flex-direction: row;
+		flex-flow: wrap;
+		justify-content: center;
+	}
+
 	.card {
 		text-align: center;
+		max-width: 40%;
 	}
 
 	.card img {
 		margin: 0 20px 0 5px;
-	}
-
-	.info h3 {
-		/*font-size: 1.4rem;*/
-	}
-
-	.info p {
-		/*font-size: 16px;*/
-	}
-
-	.card input {
-		/*font-size: 18px;*/
 	}
 
 	.button-container {

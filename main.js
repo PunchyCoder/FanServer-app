@@ -1,4 +1,4 @@
-   "use strict";
+    "use strict";
 
 const url = "https://kitsu.io/api/edge/anime"; //data.attributes.posterImage
 const APIKey = 'AIzaSyARlWxggTnR6mIMhHdyW2Bnf7BomchaBaE';
@@ -37,10 +37,9 @@ function addCardButtons() {
 	handle_TrailerButton();
 }
 
-function injectTemplate(element, count) {
+function injectTemplate(element, checkResult) {
 	const cardTemplate = 
-		`<div id=${count} class="card border">
-			<span>${count}</span>
+		`<div class="card border">
 			<img src="${element.attributes.posterImage.tiny}">
 			<div class="info">
 				<h3 class="title">${element.attributes['titles']['en']}</h3>
@@ -57,7 +56,7 @@ function injectTemplate(element, count) {
 			
 			<div class="trailer hidden">
 				<h4 class="trailer">Trailer</h4>
-				<iframe width="320" height="240" src="https://www.youtube.com/embed/${element.attributes.youtubeVideoId}"></iframe>
+				${checkResult}
 			</div>
 
 			<div class="synopsis hidden">
@@ -68,14 +67,29 @@ function injectTemplate(element, count) {
 	return cardTemplate;
 }
 
+function checkVideoId(element) { //<iframe width="320" height="240" src="https://www.youtube.com/embed/${idCheck}"></iframe>
+		let videoCheckResult;
+		const trailerEndPoint = element.attributes.youtubeVideoId;
+		if ( trailerEndPoint === null || trailerEndPoint === "" || trailerEndPoint.substring(0,6) === 'https:' ) {
+			console.log(true);
+			videoCheckResult = `<p class="error">Sorry, no video is available for this result.</p>`;
+			return videoCheckResult;
+		} else {
+			console.log(false);
+			videoCheckResult = `<iframe width="320" height="240" src="https://www.youtube.com/embed/${element.attributes.youtubeVideoId}"></iframe>`;
+			return videoCheckResult;
+		}	
+}
+
 function formatSearchResults(responseJson) {
 	$('#results').empty();
 	$('#results').append( `<h2>Results</h2>` );
-	let count = 0;
 	responseJson['data'].forEach( element => {
-		count++;
+		
+		console.log(element.attributes.youtubeVideoId)
+		console.log(element)
 		$('#results').append( 
-			injectTemplate(element, count)
+			injectTemplate(element, checkVideoId(element))
 		);
 		addCardButtons();
 	})
